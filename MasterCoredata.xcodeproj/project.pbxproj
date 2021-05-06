@@ -16,6 +16,12 @@
 		3D0649232642EABB0065C243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0649212642EABB0065C243 /* LaunchScreen.storyboard */; };
 		3D06492E2642EABB0065C243 /* MasterCoredataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06492D2642EABB0065C243 /* MasterCoredataTests.swift */; };
 		3D0649392642EABB0065C243 /* MasterCoredataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649382642EABB0065C243 /* MasterCoredataUITests.swift */; };
+		3D06494E2642EBBD0065C243 /* CoredataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06494D2642EBBD0065C243 /* CoredataStore.swift */; };
+		3D06495F2642EE600065C243 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06495E2642EE600065C243 /* PersistentContainer.swift */; };
+		3D0649AD26439A020065C243 /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649A926439A020065C243 /* Car+CoreDataClass.swift */; };
+		3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */; };
+		3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */; };
+		3D0649B026439A020065C243 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		3D0649342642EABB0065C243 /* MasterCoredataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterCoredataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0649382642EABB0065C243 /* MasterCoredataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoredataUITests.swift; sourceTree = "<group>"; };
 		3D06493A2642EABB0065C243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D06494D2642EBBD0065C243 /* CoredataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataStore.swift; sourceTree = "<group>"; };
+		3D06495E2642EE600065C243 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		3D0649A926439A020065C243 /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +113,16 @@
 		3D0649122642EAB80065C243 /* MasterCoredata */ = {
 			isa = PBXGroup;
 			children = (
-				3D0649132642EAB80065C243 /* AppDelegate.swift */,
-				3D0649152642EAB80065C243 /* SceneDelegate.swift */,
-				3D0649172642EAB80065C243 /* ViewController.swift */,
-				3D0649192642EAB80065C243 /* Main.storyboard */,
+				3D064994264399370065C243 /* models */,
+				3D064993264398300065C243 /* CoredataModel */,
+				3D064992264398250065C243 /* SceneDelegate */,
+				3D064991264398150065C243 /* AppDelegate */,
+				3D064990264398060065C243 /* Controllers */,
+				3D06498F264397FA0065C243 /* Storeboards */,
+				3D06494C2642EB950065C243 /* Store */,
 				3D06491F2642EABB0065C243 /* Assets.xcassets */,
 				3D0649212642EABB0065C243 /* LaunchScreen.storyboard */,
 				3D0649242642EABB0065C243 /* Info.plist */,
-				3D06491C2642EAB80065C243 /* MasterCoredata.xcdatamodeld */,
 			);
 			path = MasterCoredata;
 			sourceTree = "<group>";
@@ -129,6 +143,66 @@
 				3D06493A2642EABB0065C243 /* Info.plist */,
 			);
 			path = MasterCoredataUITests;
+			sourceTree = "<group>";
+		};
+		3D06494C2642EB950065C243 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				3D06494D2642EBBD0065C243 /* CoredataStore.swift */,
+				3D06495E2642EE600065C243 /* PersistentContainer.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		3D06498F264397FA0065C243 /* Storeboards */ = {
+			isa = PBXGroup;
+			children = (
+				3D0649192642EAB80065C243 /* Main.storyboard */,
+			);
+			path = Storeboards;
+			sourceTree = "<group>";
+		};
+		3D064990264398060065C243 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D0649172642EAB80065C243 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3D064991264398150065C243 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3D0649132642EAB80065C243 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3D064992264398250065C243 /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3D0649152642EAB80065C243 /* SceneDelegate.swift */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		3D064993264398300065C243 /* CoredataModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D06491C2642EAB80065C243 /* MasterCoredata.xcdatamodeld */,
+			);
+			path = CoredataModel;
+			sourceTree = "<group>";
+		};
+		3D064994264399370065C243 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3D0649A926439A020065C243 /* Car+CoreDataClass.swift */,
+				3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */,
+				3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */,
+				3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */,
 				3D0649182642EAB80065C243 /* ViewController.swift in Sources */,
+				3D06495F2642EE600065C243 /* PersistentContainer.swift in Sources */,
+				3D06494E2642EBBD0065C243 /* CoredataStore.swift in Sources */,
+				3D0649AD26439A020065C243 /* Car+CoreDataClass.swift in Sources */,
+				3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */,
+				3D0649B026439A020065C243 /* Person+CoreDataProperties.swift in Sources */,
 				3D0649142642EAB80065C243 /* AppDelegate.swift in Sources */,
 				3D06491E2642EAB80065C243 /* MasterCoredata.xcdatamodeld in Sources */,
 				3D0649162642EAB80065C243 /* SceneDelegate.swift in Sources */,

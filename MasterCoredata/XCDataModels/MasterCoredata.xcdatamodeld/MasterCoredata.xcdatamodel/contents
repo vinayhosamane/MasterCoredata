@@ -11,7 +11,7 @@
         <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Car" inverseName="owner" inverseEntity="Car"/>
     </entity>
     <elements>
-        <element name="Car" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Car" positionX="-63" positionY="-18" width="128" height="74"/>
         <element name="Person" positionX="295.66943359375" positionY="-71.88174438476562" width="128" height="73"/>
     </elements>
 </model>

@@ -22,6 +22,8 @@
 		3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */; };
 		3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */; };
 		3D0649B026439A020065C243 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */; };
+		3DFB4F9B264ABC6900B8677F /* CatalogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */; };
+		3DFB4FA0264ABCC100B8677F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB4F9F264ABCC100B8677F /* StoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListViewModel.swift; sourceTree = "<group>"; };
+		3DFB4F9F264ABCC100B8677F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +117,8 @@
 		3D0649122642EAB80065C243 /* MasterCoredata */ = {
 			isa = PBXGroup;
 			children = (
-				3D064994264399370065C243 /* models */,
-				3D064993264398300065C243 /* CoredataModel */,
+				3D064994264399370065C243 /* Models */,
+				3D064993264398300065C243 /* XCDataModels */,
 				3D064992264398250065C243 /* SceneDelegate */,
 				3D064991264398150065C243 /* AppDelegate */,
 				3D064990264398060065C243 /* Controllers */,
@@ -150,6 +154,7 @@
 			children = (
 				3D06494D2642EBBD0065C243 /* CoredataStore.swift */,
 				3D06495E2642EE600065C243 /* PersistentContainer.swift */,
+				3DFB4F9F264ABCC100B8677F /* StoreManager.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0649172642EAB80065C243 /* ViewController.swift */,
+				3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,15 +192,15 @@
 			path = SceneDelegate;
 			sourceTree = "<group>";
 		};
-		3D064993264398300065C243 /* CoredataModel */ = {
+		3D064993264398300065C243 /* XCDataModels */ = {
 			isa = PBXGroup;
 			children = (
 				3D06491C2642EAB80065C243 /* MasterCoredata.xcdatamodeld */,
 			);
-			path = CoredataModel;
+			path = XCDataModels;
 			sourceTree = "<group>";
 		};
-		3D064994264399370065C243 /* models */ = {
+		3D064994264399370065C243 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3D0649A926439A020065C243 /* Car+CoreDataClass.swift */,
@@ -202,7 +208,7 @@
 				3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */,
 				3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,12 +343,14 @@
 			files = (
 				3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */,
 				3D0649182642EAB80065C243 /* ViewController.swift in Sources */,
+				3DFB4F9B264ABC6900B8677F /* CatalogListViewModel.swift in Sources */,
 				3D06495F2642EE600065C243 /* PersistentContainer.swift in Sources */,
 				3D06494E2642EBBD0065C243 /* CoredataStore.swift in Sources */,
 				3D0649AD26439A020065C243 /* Car+CoreDataClass.swift in Sources */,
 				3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */,
 				3D0649B026439A020065C243 /* Person+CoreDataProperties.swift in Sources */,
 				3D0649142642EAB80065C243 /* AppDelegate.swift in Sources */,
+				3DFB4FA0264ABCC100B8677F /* StoreManager.swift in Sources */,
 				3D06491E2642EAB80065C243 /* MasterCoredata.xcdatamodeld in Sources */,
 				3D0649162642EAB80065C243 /* SceneDelegate.swift in Sources */,
 			);

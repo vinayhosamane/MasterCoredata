@@ -16,20 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master Coredata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqz-KE-fhf">
-                                <rect key="frame" x="109.5" y="433.5" width="195" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-iO-mx3">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uqz-KE-fhf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-4.5" id="fBC-yQ-nRS"/>
-                            <constraint firstItem="uqz-KE-fhf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z88-OX-V4M"/>
+                            <constraint firstItem="dc9-iO-mx3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K22-5r-rrt"/>
+                            <constraint firstItem="dc9-iO-mx3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sak-lq-2Vs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dc9-iO-mx3" secondAttribute="trailing" constant="20" id="fAA-CR-qc8"/>
+                            <constraint firstItem="dc9-iO-mx3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yv0-qJ-RAs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="dc9-iO-mx3" id="E6w-8Y-EDf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

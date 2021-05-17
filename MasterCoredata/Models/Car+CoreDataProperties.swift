@@ -21,6 +21,4 @@ extension Car {
 
 }
 
-extension Car : Identifiable {
-
-}
+extension Car : Identifiable {}

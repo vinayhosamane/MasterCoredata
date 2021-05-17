@@ -38,6 +38,4 @@ extension Person {
 
 }
 
-extension Person : Identifiable {
-
-}
+extension Person : Identifiable {}

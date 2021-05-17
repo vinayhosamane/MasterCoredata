@@ -24,12 +24,9 @@ class ViewController: UIViewController, UITableViewDelegate {
         setupTableviewCells()
     
         // delay and update tableview
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [unowned self] in
-            self.update(with: self.catalogCardsViewModel)
-        }
-        
+        self.update(with: self.catalogCardsViewModel)
         // delay and update tableview
-        DispatchQueue.main.asyncAfter(deadline: .now() + 15) { [unowned self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
             self.remove(RowModel(name: "Nitin", detail: "xxx@gmail.com", type: .A))
         }
         

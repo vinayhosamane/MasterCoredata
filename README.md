@@ -1,50 +1,50 @@
 # MasterCoredata
 This repository is to try to different uses cases in coredata.
 
-## Model Creation From Editor
+### Model Creation From Editor
 
-## CRUD Operations on Coredata managed object model
+### CRUD Operations on Coredata managed object model
 
-## Fetching content from Entity
+### Fetching content from Entity
 
-## Handling relationships between Entities
+### Handling relationships between Entities
 
-## Parent / Child Managed Object Contexts
+### Parent / Child Managed Object Contexts
 
-## Thread safe managed object contexts
+### Thread safe managed object contexts
 
-## Sharing managed objects between multiple contexts
+### Sharing managed objects between multiple contexts
 
-## Transactions In Coredata
+### Transactions In Coredata
 
-## Best Practices
+### Best Practices
 
-## Value change observers / KVO / Notifications
+### Value change observers / KVO / Notifications
 
-## Parent / Child context save merge policies
+### Parent / Child context save merge policies
 
-## Resolving merge conflicts
+### Resolving merge conflicts
 
-## Updating entities with new attributes
+### Updating entities with new attributes
 
-## Creating versions of coredata model
+### Creating versions of coredata model
 
-## Light weight migration policy
+### Light weight migration policy
 
-## Heavy weight migration with mapping model
+### Heavy weight migration with mapping model
 
-## Importing data from existing sql database
+### Importing data from existing sql database
 
-## Different persistent stores
+### Different persistent stores
 
-## Performance tuning using faults
+### Performance tuning using faults
 
-## Folder structure for coredata stack or related code across the project
+### Folder structure for coredata stack or related code across the project
 
-## Logging Coredata Queries
+### Logging Coredata Queries
 
-## Debugging with 'DB Browser for SQLite'
+### Debugging with 'DB Browser for SQLite'
 
-## Testing Coredata related code
+### Testing Coredata related code
 
-## Resources
+### Resources

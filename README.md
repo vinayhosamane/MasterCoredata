@@ -48,3 +48,8 @@ This repository is to try to different uses cases in coredata.
 ### Testing Coredata related code
 
 ### Resources
+Supporting Codable with NSManagedObject classes
+https://www.donnywals.com/using-codable-with-core-data-and-nsmanagedobject/
+
+Observing managed object change notifications
+https://www.donnywals.com/observing-changes-to-managed-objects-across-contexts-with-combine/

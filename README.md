@@ -15,7 +15,9 @@ This repository is to try to different uses cases in coredata.
 
 - [ ] Sharing managed objects between multiple contexts
 
-- [ ] Transactions In Coredata
+- [ ] Transactions In Coredata, Batch Insert / Delete
+
+- [ ] NSFetchedResultsController
 
 - [ ] Best Practices
 

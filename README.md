@@ -59,3 +59,12 @@ https://www.donnywals.com/observing-changes-to-managed-objects-across-contexts-w
 
 Using multiple managed object contexts in coredata
 https://www.cocoanetics.com/2012/07/multi-context-coredata/
+
+Unit of Work pattern
+https://martinfowler.com/eaaCatalog/unitOfWork.html
+
+Coredta Transactions
+https://christiantietze.de/posts/2015/10/unit-of-work-core-data-transaction/#:~:text=Transactions%20and%20Rolling%20Back%20Changes%20in%20Core%20Data%20with%20UnitOfWork,-Oct%2012th%2C%202015&text=The%20Unit%20of%20Work%20pattern,changes%20and%20have%20them%20saved.
+
+Coredata progressive migrations
+https://kean.blog/post/core-data-progressive-migrations

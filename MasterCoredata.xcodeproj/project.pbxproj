@@ -17,7 +17,7 @@
 		3D06492E2642EABB0065C243 /* MasterCoredataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06492D2642EABB0065C243 /* MasterCoredataTests.swift */; };
 		3D0649392642EABB0065C243 /* MasterCoredataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649382642EABB0065C243 /* MasterCoredataUITests.swift */; };
 		3D06494E2642EBBD0065C243 /* CoredataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06494D2642EBBD0065C243 /* CoredataStore.swift */; };
-		3D06495F2642EE600065C243 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06495E2642EE600065C243 /* PersistentContainer.swift */; };
+		3D06495F2642EE600065C243 /* CoredataStorePersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06495E2642EE600065C243 /* CoredataStorePersistentContainer.swift */; };
 		3D0649AD26439A020065C243 /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649A926439A020065C243 /* Car+CoreDataClass.swift */; };
 		3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */; };
 		3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */; };
@@ -60,7 +60,7 @@
 		3D0649382642EABB0065C243 /* MasterCoredataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoredataUITests.swift; sourceTree = "<group>"; };
 		3D06493A2642EABB0065C243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D06494D2642EBBD0065C243 /* CoredataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataStore.swift; sourceTree = "<group>"; };
-		3D06495E2642EE600065C243 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		3D06495E2642EE600065C243 /* CoredataStorePersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataStorePersistentContainer.swift; sourceTree = "<group>"; };
 		3D0649A926439A020065C243 /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3D06494D2642EBBD0065C243 /* CoredataStore.swift */,
-				3D06495E2642EE600065C243 /* PersistentContainer.swift */,
+				3D06495E2642EE600065C243 /* CoredataStorePersistentContainer.swift */,
 				3DFB4F9F264ABCC100B8677F /* StoreManager.swift */,
 			);
 			path = Store;
@@ -344,7 +344,7 @@
 				3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */,
 				3D0649182642EAB80065C243 /* ViewController.swift in Sources */,
 				3DFB4F9B264ABC6900B8677F /* CatalogListViewModel.swift in Sources */,
-				3D06495F2642EE600065C243 /* PersistentContainer.swift in Sources */,
+				3D06495F2642EE600065C243 /* CoredataStorePersistentContainer.swift in Sources */,
 				3D06494E2642EBBD0065C243 /* CoredataStore.swift in Sources */,
 				3D0649AD26439A020065C243 /* Car+CoreDataClass.swift in Sources */,
 				3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */,

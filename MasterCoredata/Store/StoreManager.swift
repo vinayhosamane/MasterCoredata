@@ -7,16 +7,23 @@
 
 import Foundation
 import CoreData
+import Combine
 
 class StoreManager {
 
     lazy var coredataPersistentContainer = CoredataStorePersistentContainer()
     lazy var currentContext = coredataPersistentContainer.persistentContainer.viewContext
     
+    var cancellables = Set<AnyCancellable>()
+    
     func execute() {
         printSQLStoreFileDirectoryPath()
-        
+
         insertDataInChildContext()
+        
+        insertRecordWithEntityDescription()
+        
+        contextInGlobalThread()
     }
     
     func insertDataInsideContextsQueue() {
@@ -116,6 +123,10 @@ class StoreManager {
         
         personManagedObject.addToCars(carManageObject)
         
+        didMergeNotificationPublisher(for: personManagedObject, in: currentContext).sink { (person) in
+            print(person)
+        }.store(in: &cancellables)
+        
         synchronize(currentContext)
     }
     
@@ -160,8 +171,47 @@ class StoreManager {
         
 //        // let's make sure, private contet changes are merged to main contet
         synchronize(currentContext)
-        
-        
+    }
+    
+    // this is used when parent / child contexts saving managed object. Child context saves managed object, parent will merge that child context changes to main context.
+    // then this notification would get triggered.
+    // here context, it should be context for which this managed object is registered. Using object id, load managed object into target context.
+    @nonobjc
+    func didMergeNotificationPublisher<T: NSManagedObject, C: NSManagedObjectContext>(for managedObject: T, in context: C) -> AnyPublisher<T, Never> {
+        let notificationName = NSManagedObjectContext.didSaveObjectIDsNotification
+        return NotificationCenter.default.publisher(for: notificationName, object: context)
+            .compactMap { (notification) -> T? in
+                if let updated = notification.userInfo?[NSInsertedObjectIDsKey] as? Set<NSManagedObjectID>,
+                   updated.contains(managedObject.objectID),
+                   let updatedObject = context.object(with: managedObject.objectID) as? T {
+                    return updatedObject
+                } else {
+                    return nil
+                }
+            }.eraseToAnyPublisher()
+    }
+    
+    func contextInGlobalThread() {
+        DispatchQueue.global().async {
+            // let's create a new context
+            // now this context will have it's own quque in this thread, so it should not be used in different thread.
+            let internalContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+            internalContext.persistentStoreCoordinator = self.currentContext.persistentStoreCoordinator
+            
+            internalContext.perform {
+                let person = Person(context: internalContext)
+                // car managed object
+                let car = Car(context: internalContext)
+                car.maker = "Honda"
+                car.model = "City"
+                car.addOwner(person)
+                
+                person.firstName = "Pavan"
+                person.lastName = "Kumar"
+                person.addToCars(car)
+            }
+            self.synchronize(internalContext)
+        }
     }
     
     func synchronize(_ context: NSManagedObjectContext) {
@@ -174,7 +224,7 @@ class StoreManager {
                         print("Error in saving context to persistent store -- \(error)")
                         
                         // let's prinnt the callstack
-                        for symbol: String in Thread.callStackSymbols {
+                        for symbol in Thread.callStackSymbols {
                             print(" > \(symbol)")
                         }
                     }

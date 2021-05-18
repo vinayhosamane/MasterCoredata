@@ -68,3 +68,6 @@ https://christiantietze.de/posts/2015/10/unit-of-work-core-data-transaction/#:~:
 
 Coredata progressive migrations
 https://kean.blog/post/core-data-progressive-migrations
+
+Apple's earth quake sample project
+https://developer.apple.com/documentation/coredata/loading_and_displaying_a_large_data_feed

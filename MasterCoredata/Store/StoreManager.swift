@@ -25,7 +25,9 @@ class StoreManager {
         
         //contextInGlobalThread()
         
-        sharingManagedObjectByObjectId()
+        //sharingManagedObjectByObjectId()
+        
+        deleteObjects()
     }
     
     func insertDataInsideContextsQueue() {
@@ -274,6 +276,26 @@ class StoreManager {
         }
         
         synchronize(currentContext)
+    }
+    
+    func deleteObjects() {
+        //let personEntityDescription = NSEntityDescription.entity(forEntityName: "Person", in: currentContext)
+        
+        // if you don't provide type 'NSFetchRequest<Person>', have you loaded entity model? error / crash happens.
+        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "firstName = %@", "Vinay")
+        
+        // https://developer.apple.com/forums/thread/70919
+        // be careful with delete rule provided to relation..if you have a inverse relationship and one has nullify and other has cascade, then the query would fail to delete records.
+        let deleteBatchRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        
+        do {
+            // you can either create dleete batch transaction or fetch all records and then delete them one by one as required.
+            // currentContext.delete(<managed-object>)
+            try currentContext.execute(deleteBatchRequest)
+        } catch let error {
+            print(error)
+        }
     }
     
     func synchronize(_ context: NSManagedObjectContext) {

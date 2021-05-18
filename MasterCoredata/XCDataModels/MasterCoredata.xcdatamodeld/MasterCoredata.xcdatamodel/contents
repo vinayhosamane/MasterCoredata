@@ -5,13 +5,13 @@
         <attribute name="model" attributeType="String"/>
         <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="cars" inverseEntity="Person"/>
     </entity>
-    <entity name="Person" representedClassName="Person" syncable="YES">
+    <entity name="Person" representedClassName=".Person" syncable="YES">
         <attribute name="firstName" attributeType="String"/>
         <attribute name="lastName" attributeType="String"/>
-        <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Car" inverseName="owner" inverseEntity="Car"/>
+        <relationship name="cars" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Car" inverseName="owner" inverseEntity="Car"/>
     </entity>
     <elements>
         <element name="Car" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Person" positionX="295.66943359375" positionY="-71.88174438476562" width="128" height="73"/>
+        <element name="Person" positionX="295.66943359375" positionY="-71.88174438476562" width="128" height="74"/>
     </elements>
 </model>

@@ -54,3 +54,6 @@ https://www.donnywals.com/using-codable-with-core-data-and-nsmanagedobject/
 
 Observing managed object change notifications
 https://www.donnywals.com/observing-changes-to-managed-objects-across-contexts-with-combine/
+
+Using multiple managed object contexts in coredata
+https://www.cocoanetics.com/2012/07/multi-context-coredata/

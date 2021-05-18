@@ -10,6 +10,7 @@ This repository is to try to different uses cases in coredata.
 ### Handling relationships between Entities
 
 ### Parent / Child Managed Object Contexts
+![Screenshot 2021-05-18 at 3 55 05 PM](https://user-images.githubusercontent.com/12964593/118635660-77cf2e80-b7f1-11eb-864e-906fe51aa022.png)
 
 ### Thread safe managed object contexts
 

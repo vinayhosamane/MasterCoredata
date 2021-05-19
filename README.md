@@ -24,8 +24,8 @@ You will master all the techniques.
 - [ ] Transactions In Coredata, Batch Insert / Delete
 
 - [x] NSFetchedResultsController
-   
-     If we want observe for change notifications consistently, then this is the best bet for you to use, so that we can refresh our UI.
+      
+      If we want observe for change notifications consistently, then this is the best bet for you to use, so that we can refresh our UI.
       
 - [ ] Best Practices
 

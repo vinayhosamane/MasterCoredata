@@ -1,19 +1,19 @@
 # MasterCoredata
 This repository is to try different uses cases in coredata.
 
-- [ ] Model Creation From Editor
+- [x] Model Creation From Editor
 
-- [ ] CRUD Operations on Coredata managed object model
+- [x] CRUD Operations on Coredata managed object model
 
-- [ ] Fetching content from Entity
+- [x] Fetching content from Entity
 
-- [ ] Handling relationships between Entities
+- [x] Handling relationships between Entities
 
-- [ ] Parent / Child Managed Object Contexts
+- [x] Parent / Child Managed Object Contexts
 
-- [ ] Thread safe managed object contexts
+- [x] Thread safe managed object contexts
 
-- [ ] Sharing managed objects between multiple contexts
+- [x] Sharing managed objects between multiple contexts
 
 - [ ] Transactions In Coredata, Batch Insert / Delete
 
@@ -27,7 +27,7 @@ This repository is to try different uses cases in coredata.
 
 - [ ] Resolving merge conflicts
 
-- [ ] Updating entities with new attributes
+- [x] Updating entities with new attributes
 
 - [ ] Creating versions of coredata model
 
@@ -43,9 +43,9 @@ This repository is to try different uses cases in coredata.
 
 - [ ] Folder structure for coredata stack or related code across the project
 
-- [ ] Logging Coredata Queries
+- [x] Logging Coredata Queries
 
-- [ ] Debugging with 'DB Browser for SQLite'
+- [x] Debugging with 'DB Browser for SQLite'
 
 - [ ] Testing Coredata related code
 

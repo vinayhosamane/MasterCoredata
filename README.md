@@ -49,6 +49,14 @@ This repository is to try different uses cases in coredata.
 
 - [ ] Testing Coredata related code
 
+- [ ] Use of Entity Constraints
+
+- [ ] Use of Abstract Entities
+
+- [ ] Adding Fetch Index or Fetch Request
+
+- [ ] Adding Configurations
+
 ## Resources
 Block diagram whichh explains how model changes saved in parent/child contexts
 ![Screenshot 2021-05-18 at 3 55 05 PM](https://user-images.githubusercontent.com/12964593/118635660-77cf2e80-b7f1-11eb-864e-906fe51aa022.png)

@@ -23,13 +23,15 @@ You will master all the techniques.
 
 - [ ] Transactions In Coredata, Batch Insert / Delete
 
-- [ ] NSFetchedResultsController
-
+- [x] NSFetchedResultsController
+   
+     If we want observe for change notifications consistently, then this is the best bet for you to use, so that we can refresh our UI.
+      
 - [ ] Best Practices
 
-- [ ] Value change observers / KVO / Notifications
+- [x] Value change observers / KVO / Notifications
 
-- [ ] Parent / Child context save merge policies
+- [x] Parent / Child context save merge policies
 
 - [ ] Resolving merge conflicts
 
@@ -47,7 +49,7 @@ You will master all the techniques.
 
 - [ ] Performance tuning using faults
 
-- [ ] Folder structure for coredata stack or related code across the project
+- [x] Folder structure for coredata stack or related code across the project
 
 - [x] Logging Coredata Queries
 

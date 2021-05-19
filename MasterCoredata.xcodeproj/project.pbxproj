@@ -22,6 +22,7 @@
 		3D0649AE26439A020065C243 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */; };
 		3D0649AF26439A020065C243 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */; };
 		3D0649B026439A020065C243 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */; };
+		3D4223C12654DF8900B736CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3D4223C02654DF8900B736CC /* README.md */; };
 		3DFB4F9B264ABC6900B8677F /* CatalogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */; };
 		3DFB4FA0264ABCC100B8677F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB4F9F264ABCC100B8677F /* StoreManager.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		3D0649AA26439A020065C243 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D0649AB26439A020065C243 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D4223C02654DF8900B736CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListViewModel.swift; sourceTree = "<group>"; };
 		3DFB4F9F264ABCC100B8677F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 		3D0649072642EAB80065C243 = {
 			isa = PBXGroup;
 			children = (
+				3D4223C02654DF8900B736CC /* README.md */,
 				3D0649122642EAB80065C243 /* MasterCoredata */,
 				3D06492C2642EABB0065C243 /* MasterCoredataTests */,
 				3D0649372642EABB0065C243 /* MasterCoredataUITests */,
@@ -316,6 +319,7 @@
 			files = (
 				3D0649232642EABB0065C243 /* LaunchScreen.storyboard in Resources */,
 				3D0649202642EABB0065C243 /* Assets.xcassets in Resources */,
+				3D4223C12654DF8900B736CC /* README.md in Resources */,
 				3D06491B2642EAB80065C243 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

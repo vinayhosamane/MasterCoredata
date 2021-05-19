@@ -1,5 +1,5 @@
 # MasterCoredata
-This repository is to try to different uses cases in coredata.
+This repository is to try different uses cases in coredata.
 
 - [ ] Model Creation From Editor
 

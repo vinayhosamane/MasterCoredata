@@ -44,6 +44,9 @@ class StoreManager {
         
         // 7.
         
+        observeForChangeNotifications()
+        
+        sharingManagedObjectByObjectId()
     }
     
     func printSQLStoreFileDirectoryPath() {
@@ -53,7 +56,8 @@ class StoreManager {
             print(paths[0])
         }
     }
-
+    
+   
 }
 
 // MARK: Simple Insert using auto generated managed model subclassed models and NSEntityDescription
@@ -97,6 +101,16 @@ extension StoreManager {
         didMergeNotificationPublisher(for: personManagedObject, in: currentContext).sink { (person) in
             print(person)
         }.store(in: &cancellables)
+        
+        synchronize(currentContext)
+    }
+    
+    func insertToManuallyCreatedModel() {
+        guard let model = NSEntityDescription.insertNewObject(forEntityName: "Company", into: currentContext) as? Company else {
+            return
+        }
+        model.name = "SAP Labs"
+        model.location = "Bangalore"
         
         synchronize(currentContext)
     }
@@ -323,6 +337,9 @@ extension StoreManager {
                     guard let person = try tempContext.existingObject(with: personId) as? Person else {
                         return
                     }
+                    // https://stackoverflow.com/questions/11990279/core-data-do-child-contexts-ever-get-permanent-objectids-for-newly-inserted-obj?rq=1
+                    // there is something called temporary and permanent object id's -> Child to Parent.
+                    // try? tempContext.obtainPermanentIDs(for: [person])
                     person.firstName = "Sandy"
                     person.lastName = "Man"
                     
@@ -368,6 +385,69 @@ extension StoreManager {
                 }
             }.eraseToAnyPublisher()
     }
+    
+    // https://medium.com/@marcosantadev/core-data-notifications-with-swift-acc8232a674e
+    func observeForChangeNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(objectsDidChange(_:)), name: Notification.Name.NSManagedObjectContextObjectsDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(contextWillSave(_:)), name: Notification.Name.NSManagedObjectContextWillSave, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(contextDidSave(_:)), name: Notification.Name.NSManagedObjectContextDidSave, object: nil)
+    }
+    
+    // 1. called first
+    // this notification will have all details like new inserted or deleted objects. etc
+    @objc
+    func objectsDidChange(_ notification: Notification) {
+        print(notification)
+    }
+    
+    // 2. called second
+    // this notification would not have any information, since the changes are not saved yet.
+    @objc
+    func contextWillSave(_ notification: Notification) {
+        print(notification)
+    }
+    
+    // 3. finally this will be called
+    @objc
+    func contextDidSave(_ notification: Notification) {
+        print(notification)
+        
+        if let insertedObjects = notification.userInfo?[NSInsertedObjectsKey] as? Set<NSManagedObject>, !insertedObjects.isEmpty {
+            print(insertedObjects)
+        }
+        if let updatedObjects = notification.userInfo?[NSUpdatedObjectsKey] as? Set<NSManagedObject>, !updatedObjects.isEmpty {
+            print(updatedObjects)
+        }
+        if let deletedObjects = notification.userInfo?[NSDeletedObjectsKey] as? Set<NSManagedObject>, !deletedObjects.isEmpty {
+            print(deletedObjects)
+        }
+        if let refreshedObjects = notification.userInfo?[NSRefreshedObjectsKey] as? Set<NSManagedObject>, !refreshedObjects.isEmpty {
+            print(refreshedObjects)
+        }
+        if let invalidatedObjects = notification.userInfo?[NSInvalidatedObjectsKey] as? Set<NSManagedObject>, !invalidatedObjects.isEmpty {
+            print(invalidatedObjects)
+        }
+        if let areInvalidatedAllObjects = notification.userInfo?[NSInvalidatedAllObjectsKey] as? Bool {
+            print(areInvalidatedAllObjects)
+        }
+    }
+    
+//    func contextSave(_ notification: Notification) {
+//        // Retrieves the context saved from the notification
+//        guard let context = notification.object as? NSManagedObjectContext else { return }
+//        // Checks if the parent context is the main one
+//        if context.parent === mainManagedObjectContext {
+//
+//            // Saves the main context
+//            mainManagedObjectContext.performAndWait {
+//                do {
+//                    try mainManagedObjectContext.save()
+//                } catch {
+//                }
+//            }
+//        }
+//    }
+
 
 }
 

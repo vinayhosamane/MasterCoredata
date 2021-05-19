@@ -1,6 +1,9 @@
 # MasterCoredata
 This repository is to try different uses cases in coredata.
 
+If you want to read a book on Coredata, then try this. https://www.objc.io/books/core-data/preview/
+You will master all the techniques.
+
 - [x] Model Creation From Editor
 
 - [x] CRUD Operations on Coredata managed object model

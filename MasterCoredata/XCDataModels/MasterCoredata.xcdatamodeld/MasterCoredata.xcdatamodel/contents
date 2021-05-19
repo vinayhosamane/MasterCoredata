@@ -5,6 +5,10 @@
         <attribute name="model" attributeType="String"/>
         <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="cars" inverseEntity="Person"/>
     </entity>
+    <entity name="Company" representedClassName=".Company" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Person" representedClassName=".Person" syncable="YES">
         <attribute name="firstName" attributeType="String"/>
         <attribute name="lastName" attributeType="String"/>
@@ -13,5 +17,6 @@
     <elements>
         <element name="Car" positionX="-63" positionY="-18" width="128" height="74"/>
         <element name="Person" positionX="295.66943359375" positionY="-71.88174438476562" width="128" height="74"/>
+        <element name="Company" positionX="126" positionY="-9" width="128" height="59"/>
     </elements>
 </model>

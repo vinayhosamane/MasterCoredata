@@ -2,6 +2,9 @@
 This repository is to try different uses cases in coredata.
 
 - [x] Model Creation From Editor
+      
+      Remember to set the `codegen` to Manual/None, if you want control over your managed object models. Otherwise Xcode will auto-generate those models on first run.
+
 
 - [x] CRUD Operations on Coredata managed object model
 

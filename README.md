@@ -89,3 +89,17 @@ https://kean.blog/post/core-data-progressive-migrations
 
 Apple's earth quake sample project
 https://developer.apple.com/documentation/coredata/loading_and_displaying_a_large_data_feed
+
+The laws of Coredata
+https://davedelong.com/blog/2018/05/09/the-laws-of-core-data/
+
+Predicate cheatsheet
+https://academy.realm.io/posts/nspredicate-cheatsheet/
+
+Life cycle of NSManagedObject
+https://www.avanderlee.com/swift/nsmanagedobject-awakefrominsert-preparefordeletion/
+
+Constraints in Coredata model
+https://www.avanderlee.com/swift/constraints-core-data-entities/
+
+Note: Coredata won't handle duplicate rows, we have to make sure to enter unique records.

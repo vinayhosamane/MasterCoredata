@@ -13,4 +13,10 @@ class Company: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var location: String
     
+    override func awakeFromInsert() {
+        // called only once for object creation.
+        // we can use this method to set some default or primitive values
+        setPrimitiveValue("Google", forKey: #keyPath(Company.name))
+    }
+    
 }

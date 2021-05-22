@@ -67,6 +67,7 @@
 		3D0649AC26439A020065C243 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D4223C02654DF8900B736CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3D4223D126556A7300B736CC /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3D8DD8FA2658C6520037DCFB /* MasterCoredata v2.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MasterCoredata v2.0.xcdatamodel"; sourceTree = "<group>"; };
 		3DFB4F9A264ABC6900B8677F /* CatalogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListViewModel.swift; sourceTree = "<group>"; };
 		3DFB4F9F264ABCC100B8677F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -694,9 +695,10 @@
 		3D06491C2642EAB80065C243 /* MasterCoredata.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3D8DD8FA2658C6520037DCFB /* MasterCoredata v2.0.xcdatamodel */,
 				3D06491D2642EAB80065C243 /* MasterCoredata.xcdatamodel */,
 			);
-			currentVersion = 3D06491D2642EAB80065C243 /* MasterCoredata.xcdatamodel */;
+			currentVersion = 3D8DD8FA2658C6520037DCFB /* MasterCoredata v2.0.xcdatamodel */;
 			path = MasterCoredata.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
